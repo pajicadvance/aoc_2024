@@ -1,12 +1,7 @@
-package day1;
+package aoc2024.day1;
 
 import it.unimi.dsi.fastutil.ints.IntArrayList;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import aoc2024.Util;
 import java.util.Collections;
 
 public class Day1 {
@@ -15,15 +10,11 @@ public class Day1 {
         IntArrayList list1 = new IntArrayList();
         IntArrayList list2 = new IntArrayList();
 
-        try (BufferedReader br = Files.newBufferedReader(Paths.get(Day1.class.getResource("/inputs/day1").toURI()))) {
-            br.lines().forEach(line -> {
-                String[] split = line.split("\\s+");
-                list1.add(Integer.parseInt(split[0]));
-                list2.add(Integer.parseInt(split[1]));
-            });
-        } catch (IOException | URISyntaxException e) {
-            e.printStackTrace(System.err);
-        }
+        Util.getInput("/inputs/day1").forEach(line -> {
+            String[] split = line.split("\\s+");
+            list1.add(Integer.parseInt(split[0]));
+            list2.add(Integer.parseInt(split[1]));
+        });
 
         Collections.sort(list1);
         Collections.sort(list2);
