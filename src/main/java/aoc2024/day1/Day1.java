@@ -7,10 +7,12 @@ import java.util.Collections;
 public class Day1 {
 
     public static void run() {
+        System.out.println("----- Day 1 -----");
+
         IntArrayList list1 = new IntArrayList();
         IntArrayList list2 = new IntArrayList();
 
-        Util.getInput("/inputs/day1").forEach(line -> {
+        Util.getInput("day1").forEach(line -> {
             String[] split = line.split("\\s+");
             list1.add(Integer.parseInt(split[0]));
             list2.add(Integer.parseInt(split[1]));
@@ -31,6 +33,6 @@ public class Day1 {
             similarityScore += list1.getInt(i) * occurrences;
         }
 
-        System.out.println("----- Day 1 -----" + "\nTotal distance: " + totalDistance + "\nSimilarity score: " + similarityScore);
+        System.out.println("Total distance: " + totalDistance + "\nSimilarity score: " + similarityScore);
     }
 }
