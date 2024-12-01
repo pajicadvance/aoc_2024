@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.pajic'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'it.unimi.dsi', name: 'fastutil', version: '8.5.15'
+}
