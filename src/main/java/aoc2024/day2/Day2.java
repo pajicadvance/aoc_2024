@@ -12,7 +12,7 @@ public class Day2 {
 
         ArrayList<IntArrayList> reports = new ArrayList<>();
 
-        Util.getInput("day2").forEach(line -> {
+        Util.getInputLines("day2").forEach(line -> {
             IntArrayList report = new IntArrayList();
             String[] levels = line.split("\\s+");
             for (String level : levels) report.add(Integer.parseInt(level));
@@ -39,7 +39,7 @@ public class Day2 {
             }
         }
 
-        System.out.println("Safe reports : " + safeReports);
+        System.out.println("Safe reports: " + safeReports);
         System.out.println("Safe reports (with dampening): " + safeReportsWithDampening);
     }
 

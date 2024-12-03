@@ -12,7 +12,7 @@ public class Day1 {
         IntArrayList list1 = new IntArrayList();
         IntArrayList list2 = new IntArrayList();
 
-        Util.getInput("day1").forEach(line -> {
+        Util.getInputLines("day1").forEach(line -> {
             String[] split = line.split("\\s+");
             list1.add(Integer.parseInt(split[0]));
             list2.add(Integer.parseInt(split[1]));
