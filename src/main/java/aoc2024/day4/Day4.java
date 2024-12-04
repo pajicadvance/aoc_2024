@@ -21,14 +21,9 @@ public class Day4 {
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[i].length; j++) {
                 if (m[i][j] == 'X') {
-                    if (xmasSearch(m, i, j, Direction.N)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.S)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.E)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.W)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.NE)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.SW)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.NW)) xmasAppearances++;
-                    if (xmasSearch(m, i, j, Direction.SE)) xmasAppearances++;
+                    for (Direction dir : Direction.values()) {
+                        if (xmasSearch(m, i, j, dir)) xmasAppearances++;
+                    }
                 }
                 if (m[i][j] == 'A' && mas2Search(m, i, j)) mas2Appearances++;
             }
