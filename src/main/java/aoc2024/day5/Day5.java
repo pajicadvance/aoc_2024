@@ -48,7 +48,7 @@ public class Day5 {
         for (IntIntImmutablePair rule : applicableRules) {
             int leftIndex = update.indexOf(rule.leftInt());
             int rightIndex = update.indexOf(rule.rightInt());
-            if (leftIndex != -1 && rightIndex != -1 && leftIndex > rightIndex) {
+            if (leftIndex > rightIndex) {
                 isCorrect = false;
                 int helper = update.getInt(leftIndex);
                 update.set(leftIndex, update.getInt(rightIndex));
