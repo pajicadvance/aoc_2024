@@ -4,6 +4,7 @@ import aoc2024.day1.Day1;
 import aoc2024.day2.Day2;
 import aoc2024.day3.Day3;
 import aoc2024.day4.Day4;
+import aoc2024.day5.Day5;
 
 public class Main {
 
@@ -12,5 +13,6 @@ public class Main {
         Day2.run();
         Day3.run();
         Day4.run();
+        Day5.run();
     }
 }
